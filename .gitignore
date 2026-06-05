@@ -1,0 +1,14 @@
+# Virtual environments
+.venv/
+.venv-1/
+
+# Data — raw + generated parquet (don't expose telemetry)
+Data/raw/
+Data/Transformed/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
