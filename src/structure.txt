@@ -1,0 +1,20 @@
+Telemetry_Medallion/
+├── Data/
+│   ├── raw/
+│   │   └── test_data.json          # source: 720K nested telemetry docs (gitignored)
+│   └── Transformed/                # pipeline output (gitignored)
+│       ├── bronze/                 # partitioned raw: device_id=*/event_date=*/
+│       ├── silver/                 # gps.parquet, climate.parquet, motor.parquet, rejected.parquet
+│       └── gold/                   # telemetry_1min.parquet
+│
+├── src/
+│   ├── config.py                   # central paths (RAW / BRONZE / SILVER / GOLD)
+│   ├── check_data.py               # exploratory profiling (fleet, devices, ranges)
+│   ├── bronze.py                   # Layer 1: land raw -> partitioned Parquet
+│   ├── silver.py                   # Layer 2: explode + validate + compact
+│   ├── utils.py                    # validation rules (GPS/climate/motor, Europe bounds)
+│   └── gold.py                     # Layer 3: 1-min resample + trips/charging/distance
+│
+├── .gitignore                      # excludes Data/, .venv/, __pycache__/
+├── README.md                       # setup + how to run
+└── requirements.txt                # pyarrow, pandas
