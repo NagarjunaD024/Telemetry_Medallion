@@ -1,8 +1,8 @@
 import json
 from collections import defaultdict
 from datetime import datetime, timezone
+from config import RAW_PATH
 
-RAW_PATH = "Data/raw/test_data.json"
 
 device_docs   = defaultdict(int)
 device_ts_min = {}
