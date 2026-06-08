@@ -14,7 +14,7 @@ Telemetry_Medallion/
 │   ├── silver.py                   # Layer 2: explode + validate + compact
 │   ├── utils.py                    # validation rules (GPS/climate/motor, Europe bounds)
 │   └── gold.py                     # Layer 3: 1-min resample + trips/charging/distance
-│
+│──  main.py
 ├── .gitignore                      # excludes Data/, .venv/, __pycache__/
 ├── README.md                       # setup + how to run
 └── requirements.txt                # pyarrow, pandas

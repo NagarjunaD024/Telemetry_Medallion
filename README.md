@@ -28,6 +28,8 @@ python src/gold.py       # → 240,747 minute-rows × 18 columns
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 # place test_data.json in Data/raw/  (data is gitignored)
+# Run the below command to run bronze, Silver, Gold command
+cd /workspaces/Telemetry_Medallion python main.py
 ```
 
 ---
